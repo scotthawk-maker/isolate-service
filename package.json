@@ -1,0 +1,12 @@
+{
+  "name": "isolate-service",
+  "version": "0.1.0",
+  "description": "Lightweight V8/WASM isolate execution service — local Cloudflare-style Dynamic Workers",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node tests/run.js"
+  },
+  "license": "MIT"
+}
