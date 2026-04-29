@@ -1,0 +1,17 @@
+[Unit]
+Description=Isolate Service (V8/WASM Sandbox)
+After=network.target
+
+[Service]
+Type=simple
+User=shawn
+WorkingDirectory=/home/shawn/mining/isolate-service
+ExecStart=/usr/bin/node src/server.js
+Environment=ISOLATE_AUTH_TOKEN=your-secret-token
+Environment=ISOLATE_PORT=5900
+Environment=ISOLATE_HOST=127.0.0.1
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
